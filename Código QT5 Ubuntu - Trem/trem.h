@@ -15,7 +15,8 @@ class Trem: public QThread{
 public:
     Trem(int,int,int);  //construtor
     void run();         //função a ser executada pela thread
-
+    // novaVelocidadeSlider1(int);
+    void setVelocidade (int novaVelocidade);
 
 //Cria um sinal
 signals:

@@ -78,19 +78,6 @@
      <string/>
     </property>
    </widget>
-   <widget class="QPushButton" name="pushButton_2">
-    <property name="geometry">
-     <rect>
-      <x>160</x>
-      <y>350</y>
-      <width>98</width>
-      <height>27</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string>Parar</string>
-    </property>
-   </widget>
    <widget class="QLabel" name="label_trilho4_2">
     <property name="geometry">
      <rect>
@@ -350,8 +337,8 @@
    <widget class="QSlider" name="slider_velTrem1">
     <property name="geometry">
      <rect>
-      <x>420</x>
-      <y>320</y>
+      <x>150</x>
+      <y>350</y>
       <width>160</width>
       <height>16</height>
      </rect>
@@ -366,8 +353,8 @@
    <widget class="QSlider" name="slider_velTrem2">
     <property name="geometry">
      <rect>
-      <x>420</x>
-      <y>340</y>
+      <x>340</x>
+      <y>350</y>
       <width>160</width>
       <height>16</height>
      </rect>
@@ -382,8 +369,8 @@
    <widget class="QSlider" name="slider_velTrem3">
     <property name="geometry">
      <rect>
-      <x>420</x>
-      <y>360</y>
+      <x>530</x>
+      <y>350</y>
       <width>160</width>
       <height>16</height>
      </rect>
@@ -398,8 +385,8 @@
    <widget class="QSlider" name="slider_velTrem4">
     <property name="geometry">
      <rect>
-      <x>420</x>
-      <y>380</y>
+      <x>720</x>
+      <y>350</y>
       <width>160</width>
       <height>16</height>
      </rect>
@@ -414,8 +401,8 @@
    <widget class="QSlider" name="slider_velTrem5">
     <property name="geometry">
      <rect>
-      <x>420</x>
-      <y>400</y>
+      <x>910</x>
+      <y>350</y>
       <width>160</width>
       <height>16</height>
      </rect>
@@ -427,11 +414,75 @@
      <enum>Qt::Horizontal</enum>
     </property>
    </widget>
+   <widget class="QLineEdit" name="lineEdit">
+    <property name="geometry">
+     <rect>
+      <x>180</x>
+      <y>310</y>
+      <width>113</width>
+      <height>25</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Trem 1</string>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="lineEdit_2">
+    <property name="geometry">
+     <rect>
+      <x>350</x>
+      <y>310</y>
+      <width>113</width>
+      <height>25</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Trem 2</string>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="lineEdit_3">
+    <property name="geometry">
+     <rect>
+      <x>540</x>
+      <y>310</y>
+      <width>113</width>
+      <height>25</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Trem 3</string>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="lineEdit_4">
+    <property name="geometry">
+     <rect>
+      <x>750</x>
+      <y>310</y>
+      <width>113</width>
+      <height>25</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Trem 4</string>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="lineEdit_5">
+    <property name="geometry">
+     <rect>
+      <x>930</x>
+      <y>310</y>
+      <width>113</width>
+      <height>25</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Trem 5</string>
+    </property>
+   </widget>
    <zorder>label_trilho1_5</zorder>
    <zorder>label_trilho1</zorder>
    <zorder>label_trilho3</zorder>
    <zorder>label_trilho4</zorder>
-   <zorder>pushButton_2</zorder>
    <zorder>label_trilho4_2</zorder>
    <zorder>label_trilho1_2</zorder>
    <zorder>label_trilho4_3</zorder>
@@ -453,6 +504,11 @@
    <zorder>label_trem5</zorder>
    <zorder>label_trem3</zorder>
    <zorder>label_trem1</zorder>
+   <zorder>lineEdit</zorder>
+   <zorder>lineEdit_2</zorder>
+   <zorder>lineEdit_3</zorder>
+   <zorder>lineEdit_4</zorder>
+   <zorder>lineEdit_5</zorder>
   </widget>
   <widget class="QMenuBar" name="menuBar">
    <property name="geometry">
@@ -477,4 +533,7 @@
  <layoutdefault spacing="6" margin="11"/>
  <resources/>
  <connections/>
+ <slots>
+  <slot>novaVelocidadeSlider1()</slot>
+ </slots>
 </ui>

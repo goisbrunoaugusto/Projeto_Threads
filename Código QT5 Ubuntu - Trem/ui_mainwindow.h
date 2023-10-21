@@ -12,9 +12,9 @@
 #include <QtCore/QVariant>
 #include <QtWidgets/QApplication>
 #include <QtWidgets/QLabel>
+#include <QtWidgets/QLineEdit>
 #include <QtWidgets/QMainWindow>
 #include <QtWidgets/QMenuBar>
-#include <QtWidgets/QPushButton>
 #include <QtWidgets/QSlider>
 #include <QtWidgets/QStatusBar>
 #include <QtWidgets/QToolBar>
@@ -30,7 +30,6 @@ public:
     QLabel *label_trilho1;
     QLabel *label_trilho3;
     QLabel *label_trilho4;
-    QPushButton *pushButton_2;
     QLabel *label_trilho4_2;
     QLabel *label_trilho1_2;
     QLabel *label_trem2;
@@ -52,6 +51,11 @@ public:
     QSlider *slider_velTrem3;
     QSlider *slider_velTrem4;
     QSlider *slider_velTrem5;
+    QLineEdit *lineEdit;
+    QLineEdit *lineEdit_2;
+    QLineEdit *lineEdit_3;
+    QLineEdit *lineEdit_4;
+    QLineEdit *lineEdit_5;
     QMenuBar *menuBar;
     QToolBar *mainToolBar;
     QStatusBar *statusBar;
@@ -79,9 +83,6 @@ public:
         label_trilho4->setObjectName(QString::fromUtf8("label_trilho4"));
         label_trilho4->setGeometry(QRect(310, 30, 21, 137));
         label_trilho4->setStyleSheet(QString::fromUtf8("QLabel { background: yellow}"));
-        pushButton_2 = new QPushButton(centralWidget);
-        pushButton_2->setObjectName(QString::fromUtf8("pushButton_2"));
-        pushButton_2->setGeometry(QRect(160, 350, 98, 27));
         label_trilho4_2 = new QLabel(centralWidget);
         label_trilho4_2->setObjectName(QString::fromUtf8("label_trilho4_2"));
         label_trilho4_2->setGeometry(QRect(850, 30, 21, 137));
@@ -148,35 +149,49 @@ public:
         label_trem5->setStyleSheet(QString::fromUtf8("QLabel { background: red}"));
         slider_velTrem1 = new QSlider(centralWidget);
         slider_velTrem1->setObjectName(QString::fromUtf8("slider_velTrem1"));
-        slider_velTrem1->setGeometry(QRect(420, 320, 160, 16));
+        slider_velTrem1->setGeometry(QRect(150, 350, 160, 16));
         slider_velTrem1->setMaximum(200);
         slider_velTrem1->setOrientation(Qt::Horizontal);
         slider_velTrem2 = new QSlider(centralWidget);
         slider_velTrem2->setObjectName(QString::fromUtf8("slider_velTrem2"));
-        slider_velTrem2->setGeometry(QRect(420, 340, 160, 16));
+        slider_velTrem2->setGeometry(QRect(340, 350, 160, 16));
         slider_velTrem2->setMaximum(200);
         slider_velTrem2->setOrientation(Qt::Horizontal);
         slider_velTrem3 = new QSlider(centralWidget);
         slider_velTrem3->setObjectName(QString::fromUtf8("slider_velTrem3"));
-        slider_velTrem3->setGeometry(QRect(420, 360, 160, 16));
+        slider_velTrem3->setGeometry(QRect(530, 350, 160, 16));
         slider_velTrem3->setMaximum(200);
         slider_velTrem3->setOrientation(Qt::Horizontal);
         slider_velTrem4 = new QSlider(centralWidget);
         slider_velTrem4->setObjectName(QString::fromUtf8("slider_velTrem4"));
-        slider_velTrem4->setGeometry(QRect(420, 380, 160, 16));
+        slider_velTrem4->setGeometry(QRect(720, 350, 160, 16));
         slider_velTrem4->setMaximum(200);
         slider_velTrem4->setOrientation(Qt::Horizontal);
         slider_velTrem5 = new QSlider(centralWidget);
         slider_velTrem5->setObjectName(QString::fromUtf8("slider_velTrem5"));
-        slider_velTrem5->setGeometry(QRect(420, 400, 160, 16));
+        slider_velTrem5->setGeometry(QRect(910, 350, 160, 16));
         slider_velTrem5->setMaximum(200);
         slider_velTrem5->setOrientation(Qt::Horizontal);
+        lineEdit = new QLineEdit(centralWidget);
+        lineEdit->setObjectName(QString::fromUtf8("lineEdit"));
+        lineEdit->setGeometry(QRect(180, 310, 113, 25));
+        lineEdit_2 = new QLineEdit(centralWidget);
+        lineEdit_2->setObjectName(QString::fromUtf8("lineEdit_2"));
+        lineEdit_2->setGeometry(QRect(350, 310, 113, 25));
+        lineEdit_3 = new QLineEdit(centralWidget);
+        lineEdit_3->setObjectName(QString::fromUtf8("lineEdit_3"));
+        lineEdit_3->setGeometry(QRect(540, 310, 113, 25));
+        lineEdit_4 = new QLineEdit(centralWidget);
+        lineEdit_4->setObjectName(QString::fromUtf8("lineEdit_4"));
+        lineEdit_4->setGeometry(QRect(750, 310, 113, 25));
+        lineEdit_5 = new QLineEdit(centralWidget);
+        lineEdit_5->setObjectName(QString::fromUtf8("lineEdit_5"));
+        lineEdit_5->setGeometry(QRect(930, 310, 113, 25));
         MainWindow->setCentralWidget(centralWidget);
         label_trilho1_5->raise();
         label_trilho1->raise();
         label_trilho3->raise();
         label_trilho4->raise();
-        pushButton_2->raise();
         label_trilho4_2->raise();
         label_trilho1_2->raise();
         label_trilho4_3->raise();
@@ -198,6 +213,11 @@ public:
         label_trem5->raise();
         label_trem3->raise();
         label_trem1->raise();
+        lineEdit->raise();
+        lineEdit_2->raise();
+        lineEdit_3->raise();
+        lineEdit_4->raise();
+        lineEdit_5->raise();
         menuBar = new QMenuBar(MainWindow);
         menuBar->setObjectName(QString::fromUtf8("menuBar"));
         menuBar->setGeometry(QRect(0, 0, 1168, 22));
@@ -221,7 +241,6 @@ public:
         label_trilho1->setText(QString());
         label_trilho3->setText(QString());
         label_trilho4->setText(QString());
-        pushButton_2->setText(QCoreApplication::translate("MainWindow", "Parar", nullptr));
         label_trilho4_2->setText(QString());
         label_trilho1_2->setText(QString());
         label_trem2->setText(QCoreApplication::translate("MainWindow", "T2", nullptr));
@@ -238,6 +257,11 @@ public:
         label_trem3->setText(QCoreApplication::translate("MainWindow", "T3", nullptr));
         label_trem4->setText(QCoreApplication::translate("MainWindow", "T4", nullptr));
         label_trem5->setText(QCoreApplication::translate("MainWindow", "T5", nullptr));
+        lineEdit->setText(QCoreApplication::translate("MainWindow", "Trem 1", nullptr));
+        lineEdit_2->setText(QCoreApplication::translate("MainWindow", "Trem 2", nullptr));
+        lineEdit_3->setText(QCoreApplication::translate("MainWindow", "Trem 3", nullptr));
+        lineEdit_4->setText(QCoreApplication::translate("MainWindow", "Trem 4", nullptr));
+        lineEdit_5->setText(QCoreApplication::translate("MainWindow", "Trem 5", nullptr));
     } // retranslateUi
 
 };

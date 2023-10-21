@@ -27,6 +27,8 @@ MainWindow::MainWindow(QWidget *parent) :
     connect(trem4,SIGNAL(updateGUI(int,int,int)),SLOT(updateInterface(int,int,int)));
     connect(trem5,SIGNAL(updateGUI(int,int,int)),SLOT(updateInterface(int,int,int)));
 
+    // connect(slider1,SIGNAL(novaVelocidade1(int,int,int)),SLOT(updateInterface(int,int,int)));
+
 
 }
 
@@ -71,6 +73,10 @@ void MainWindow::start()
 
 }
 
+int MainWindow::slotNovaVelocidadeSlider1(int novaVelocidade){
+    return novaVelocidade;
+}
+
 /*
  * Ao clicar, trens param execução
  */
@@ -82,3 +88,36 @@ void MainWindow::on_pushButton_2_clicked()
     trem4->terminate();
     trem5->terminate();
 }
+
+void MainWindow::on_slider_velTrem1_valueChanged(int value)
+{
+//    if (value == 0){
+//        trem1->setVelocidade(value)
+//    }
+    trem1->setVelocidade(value);
+}
+
+
+void MainWindow::on_slider_velTrem2_valueChanged(int value)
+{
+    trem2->setVelocidade(value);
+}
+
+
+void MainWindow::on_slider_velTrem3_valueChanged(int value)
+{
+    trem3->setVelocidade(value);
+}
+
+
+void MainWindow::on_slider_velTrem4_valueChanged(int value)
+{
+    trem4->setVelocidade(value);
+}
+
+
+void MainWindow::on_slider_velTrem5_valueChanged(int value)
+{
+    trem5->setVelocidade(value);
+}
+

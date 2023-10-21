@@ -53,9 +53,11 @@ OBJECTS_DIR   = ./
 ####### Files
 
 SOURCES       = main.cpp \
+		mainwindow.cpp \
 		trem.cpp moc_mainwindow.cpp \
 		moc_trem.cpp
 OBJECTS       = main.o \
+		mainwindow.o \
 		trem.o \
 		moc_mainwindow.o \
 		moc_trem.o
@@ -138,6 +140,7 @@ DIST          = /usr/lib/x86_64-linux-gnu/qt5/mkspecs/features/spec_pre.prf \
 		/usr/lib/x86_64-linux-gnu/qt5/mkspecs/features/lex.prf \
 		Trem.pro mainwindow.h \
 		trem.h main.cpp \
+		mainwindow.cpp \
 		trem.cpp
 QMAKE_TARGET  = Trem
 DESTDIR       = 
@@ -323,7 +326,7 @@ distdir: FORCE
 	$(COPY_FILE) --parents $(DIST) $(DISTDIR)/
 	$(COPY_FILE) --parents /usr/lib/x86_64-linux-gnu/qt5/mkspecs/features/data/dummy.cpp $(DISTDIR)/
 	$(COPY_FILE) --parents mainwindow.h trem.h $(DISTDIR)/
-	$(COPY_FILE) --parents main.cpp trem.cpp $(DISTDIR)/
+	$(COPY_FILE) --parents main.cpp mainwindow.cpp trem.cpp $(DISTDIR)/
 	$(COPY_FILE) --parents mainwindow.ui $(DISTDIR)/
 
 
@@ -392,10 +395,13 @@ compiler_clean: compiler_moc_predefs_clean compiler_moc_header_clean compiler_ui
 ####### Compile
 
 main.o: main.cpp mainwindow.h \
-		trem.h \
-		mainwindow.cpp \
-		ui_mainwindow.h
+		trem.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o main.o main.cpp
+
+mainwindow.o: mainwindow.cpp mainwindow.h \
+		trem.h \
+		ui_mainwindow.h
+	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o mainwindow.o mainwindow.cpp
 
 trem.o: trem.cpp trem.h \
 		ui_mainwindow.h
